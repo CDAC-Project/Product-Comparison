@@ -21,9 +21,12 @@ public class Product {
 	@JoinColumn(name = "subcategory_id")
 	SubCategory subCategory;
 	double price;
-
+	
+/*	@OneToOne(mappedBy="product")
+	OrderProduct orderProduct;
+*/
 	public Product() {
-
+		System.out.println("Default CTOR of PRODUCT POJO");
 	}
 
 	public Product(Integer product_id, String modelNo, String product_name, String brand, Category category,

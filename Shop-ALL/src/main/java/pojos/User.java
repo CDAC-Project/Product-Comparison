@@ -21,8 +21,10 @@ public class User {
 	private String userType;
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private List<Address> addresses=new ArrayList<>();
+	@OneToMany(mappedBy="user")
+	private List<Order> orders=new ArrayList<>();
 	public User() {
-		// TODO Auto-generated constructor stub
+		System.out.println("Default CTOR of USER POJO");
 	}
 
 }
