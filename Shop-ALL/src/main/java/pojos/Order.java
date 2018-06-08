@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,7 +28,7 @@ public class Order {
 	@Temporal(TemporalType.DATE)
 	Date orderedDate;
 	
-	@ManyToOne
+	@OneToOne
 	@JoinColumn(name="user_id")
 	User user;
 	
