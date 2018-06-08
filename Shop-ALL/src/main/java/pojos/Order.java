@@ -29,7 +29,7 @@ public class Order {
 	Date orderedDate;
 	
 	@OneToOne
-	@JoinColumn(name="user_id")
+	@JoinColumn(name="email")
 	User user;
 	
 	@ManyToMany(mappedBy="orders")
